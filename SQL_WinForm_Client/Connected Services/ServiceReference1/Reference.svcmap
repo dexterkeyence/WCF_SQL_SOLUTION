@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fcf65bd8-ed1e-4ac6-b137-9255980a5491" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53117/SQLService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SQLService.xsd" MetadataType="Schema" ID="c24983e0-a15e-4b8f-b7f5-f30af6d69806" SourceId="1" SourceUrl="http://localhost:53117/SQLService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SQLService1.xsd" MetadataType="Schema" ID="6c6b69af-5ec1-4087-962e-c2af45f38d08" SourceId="1" SourceUrl="http://localhost:53117/SQLService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="d2016162-99fe-4e64-b2b5-7302064ffb48" SourceId="1" SourceUrl="http://localhost:53117/SQLService.svc?wsdl" />
+    <MetadataFile FileName="SQLService.disco" MetadataType="Disco" ID="9f45a2c1-db8c-4985-a7d4-194ee0c854f5" SourceId="1" SourceUrl="http://localhost:53117/SQLService.svc?disco" />
+    <MetadataFile FileName="SQLService2.xsd" MetadataType="Schema" ID="d5184b02-f4de-42cf-8a34-74c17ec42e44" SourceId="1" SourceUrl="http://localhost:53117/SQLService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
