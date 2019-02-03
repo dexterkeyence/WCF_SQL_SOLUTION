@@ -30,7 +30,7 @@ Public Class Service1
 
 
             'Open the connection.
-            'myConn.Open()
+            myConn.Open()
 
             myReader = myCmd.ExecuteReader()
             'Concatenate the query result into a string.
