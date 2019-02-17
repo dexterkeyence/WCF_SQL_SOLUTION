@@ -35,4 +35,21 @@
         TextBox1.Text = SQLCommand
 
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        SQLCommand = "BEGIN "
+        SQLCommand += "IF NOT EXISTS (SELECT Serial FROM TestDB.dbo.TestTable WHERE Serial = '61231543') " & vbLf
+        SQLCommand += "BEGIN  " & vbLf
+        SQLCommand += "INSERT INTO TestDB.dbo.TestTable (Serial,ModelName,CycleStartTmp,CycleEndTemp,Cycletime) " & vbLf
+        SQLCommand += "VALUES (61231543,2,3,4,5) " & vbLf
+        SQLCommand += "END " & vbLf
+        SQLCommand += "END " & vbLf
+        TextBox1.Text = SQLCommand
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        SQLCommand = "Delete from TestDB.dbo.TestTable Where Serial = '231' "
+        TextBox1.Text = SQLCommand
+
+    End Sub
 End Class

@@ -30,14 +30,16 @@ Partial Class Form1
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(28, 47)
+        Me.TextBox1.Location = New System.Drawing.Point(28, 60)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(701, 125)
+        Me.TextBox1.Size = New System.Drawing.Size(988, 125)
         Me.TextBox1.TabIndex = 0
         '
         'Label1
@@ -82,7 +84,7 @@ Partial Class Form1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(28, 287)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(701, 151)
+        Me.RichTextBox1.Size = New System.Drawing.Size(988, 151)
         Me.RichTextBox1.TabIndex = 6
         Me.RichTextBox1.Text = ""
         '
@@ -104,11 +106,31 @@ Partial Class Form1
         Me.Button4.Text = "Insert_Example"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(709, 14)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(151, 33)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "Insert_Not_Exist_Example"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(866, 14)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(151, 33)
+        Me.Button6.TabIndex = 10
+        Me.Button6.Text = "Delete_Rows_Example"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 450)
+        Me.ClientSize = New System.Drawing.Size(1028, 450)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.RichTextBox1)
@@ -132,4 +154,6 @@ Partial Class Form1
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
