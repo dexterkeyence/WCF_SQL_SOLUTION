@@ -52,6 +52,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -136,6 +138,13 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\DataTestService\Wcf_Data_Test.disco" />
+    <None Include="Connected Services\DataTestService\configuration91.svcinfo" />
+    <None Include="Connected Services\DataTestService\configuration.svcinfo" />
+    <None Include="Connected Services\DataTestService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Production_Status.aspx" />
     <Content Include="Machine1Control.aspx" />
     <Content Include="DataList.aspx" />
@@ -156,6 +165,19 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Connected Services\DataTestService\Service1.wsdl" />
+    <None Include="Connected Services\DataTestService\Wcf_Data_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataTestService\Wcf_Data_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataTestService\Wcf_Data_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\DataTestService\WebApp_WcfKVHost_SQL.DataTestService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -191,6 +213,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Connected Services\DataTestService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Production_Status.aspx.designer.vb">
       <DependentUpon>Production_Status.aspx</DependentUpon>
     </Compile>
@@ -295,6 +322,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DataTestService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
