@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="WCF_KVHOSTLINK.Service1" CodeBehind="KVHostService1.svc.vb" %>

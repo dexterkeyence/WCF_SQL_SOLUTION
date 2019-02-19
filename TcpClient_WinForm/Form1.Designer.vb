@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnRead
@@ -99,7 +100,7 @@ Partial Class Form1
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(105, 20)
         Me.TextBox2.TabIndex = 8
-        Me.TextBox2.Text = "127.0.0.1"
+        Me.TextBox2.Text = "192.168.0.5"
         '
         'TextBox3
         '
@@ -107,7 +108,7 @@ Partial Class Form1
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(105, 20)
         Me.TextBox3.TabIndex = 9
-        Me.TextBox3.Text = "8888"
+        Me.TextBox3.Text = "8501"
         '
         'Label2
         '
@@ -142,7 +143,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(251, 20)
         Me.TextBox4.TabIndex = 12
-        Me.TextBox4.Text = "LON"
+        Me.TextBox4.Text = "RD DM0"
         '
         'Button1
         '
@@ -153,11 +154,21 @@ Partial Class Form1
         Me.Button1.Text = "Dis-Connect"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(520, 392)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(93, 36)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Send & Read"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox4)
@@ -190,4 +201,5 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

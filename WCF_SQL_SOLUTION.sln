@@ -15,8 +15,13 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TcpClient_WinForm", "TcpClient_WinForm\TcpClient_WinForm.vbproj", "{740F3562-1F07-43A1-86AA-4C84083B8286}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebApp_WcfKVHost_SQL", "WebApp_WcfKVHost_SQL\WebApp_WcfKVHost_SQL.vbproj", "{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD} = {1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}
+	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Wcf_Data_Test", "Wcf_Data_Test\Wcf_Data_Test.vbproj", "{718C2DC1-95B1-4905-86A7-A7F15718984A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WCF_KVHOSTLINK", "WCF_KVHOSTLINK\WCF_KVHOSTLINK.vbproj", "{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +53,10 @@ Global
 		{718C2DC1-95B1-4905-86A7-A7F15718984A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{718C2DC1-95B1-4905-86A7-A7F15718984A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{718C2DC1-95B1-4905-86A7-A7F15718984A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9E3A41-B780-4E6F-BECA-1100DFF96FBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

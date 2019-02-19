@@ -145,6 +145,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
+    <None Include="Connected Services\KVHost\KVHostService1.disco" />
+    <None Include="Connected Services\KVHost\configuration91.svcinfo" />
+    <None Include="Connected Services\KVHost\configuration.svcinfo" />
+    <None Include="Connected Services\KVHost\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Production_Status.aspx" />
     <Content Include="Machine1Control.aspx" />
     <Content Include="DataList.aspx" />
@@ -178,6 +185,20 @@
     <Content Include="Connected Services\DataTestService\WebApp_WcfKVHost_SQL.DataTestService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\KVHost\KVHostService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KVHost\KVHostService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KVHost\KVHostService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KVHost\Service1.wsdl" />
+    <Content Include="Connected Services\KVHost\WebApp_WcfKVHost_SQL.KVHost.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -214,6 +235,11 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Connected Services\DataTestService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\KVHost\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -328,6 +354,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\DataTestService\" />
+    <WCFMetadataStorage Include="Connected Services\KVHost\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

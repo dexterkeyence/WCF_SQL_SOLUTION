@@ -51,7 +51,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Production_Status">Production_Status</a></li>
-                        <li><a runat="server" href="~/Machine1Control">Machine1_Control</a></li>
+                        <li><a runat="server" href="~/Machine1Control">Machine Control</a></li>
                         <li><a runat="server" href="~/DataList">Data List</a></li>
                     </ul>
                 </div>

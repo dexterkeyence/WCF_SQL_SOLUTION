@@ -11,27 +11,39 @@ Public Class Form1
 
 
     Sub msg(ByVal mesg As String)
-        TextBox1.Text = TextBox1.Text + Environment.NewLine + " >> " + mesg
+        'TextBox1.Text = TextBox1.Text + Environment.NewLine + " >>" + mesg
+        TextBox1.Text = TextBox1.Text + Environment.NewLine + "" + mesg
     End Sub
 
     Private Sub BtnRead_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRead.Click
         Dim serverStream As NetworkStream = clientSocket.GetStream()
-        Dim inStream(10024) As Byte
+        Dim inStream(500024) As Byte
+        Dim returndata As String = ""
+
+        clientSocket.ReceiveTimeout = 10000 ' 10 SECONDS
+
+        clientSocket.ReceiveBufferSize() = 5000000
+
+        Do
+
+            Try
+
+                serverStream.Read(inStream, 0, 100000)
+
+                returndata = returndata + System.Text.Encoding.ASCII.GetString(inStream)
+                'msg("Data from Server : " + returndata)
 
 
-        MsgBox(clientSocket.Available)
-        Try
-            clientSocket.ReceiveTimeout = 10000 ' 10 SECONDS
+            Catch ex As Exception
+                MsgBox("No DATA")
+                msg(ex.ToString)
+            Finally
 
-            serverStream.Read(inStream, 0, 1000)
+            End Try
 
-            Dim returndata As String = System.Text.Encoding.ASCII.GetString(inStream)
-            msg("Data from Server : " + returndata)
+        Loop Until clientSocket.Available = 0
 
-
-        Catch ex As Exception
-            MsgBox("No DATA")
-        End Try
+        msg("" + returndata)
 
 
 
@@ -83,6 +95,70 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
+        Dim clientSocket As New System.Net.Sockets.TcpClient
+
+        Try
+            clientSocket.Connect(TextBox2.Text, TextBox3.Text)
+            'msg("Client Started")
+            Label3.Text = "Server Connected ..."
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            If clientSocket.Connected = False Then
+                MsgBox("Cannot Connect, Please check that IP Address and Port Number is correct!!")
+            Else
+
+                MsgBox("The connection is already Established!! ")
+            End If
+        End Try
+
+
+        Dim serverStream As NetworkStream = clientSocket.GetStream()
+        Dim outStream As Byte() = System.Text.Encoding.ASCII.GetBytes(TextBox4.Text & vbCrLf)
+        Dim inStream(500024) As Byte
+        Dim returndata As String = ""
+        serverStream.Write(outStream, 0, outStream.Length)
+        serverStream.Flush()
+        clientSocket.ReceiveTimeout = 10000 ' 10 SECONDS
+
+        clientSocket.ReceiveBufferSize() = 5000000
+
+        Do
+
+            Try
+
+                serverStream.Read(inStream, 0, 100000)
+
+                returndata = returndata + System.Text.Encoding.ASCII.GetString(inStream)
+                'msg("Data from Server : " + returndata)
+
+
+            Catch ex As Exception
+                MsgBox("No DATA")
+                msg(ex.ToString)
+            Finally
+
+            End Try
+
+        Loop Until clientSocket.Available = 0
+
+        msg("" + returndata)
+
+
+        clientSocket.Close()
+        'msg("Client Disconnected")
+        Label3.Text = "Server Dis-Connected ..."
+
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+
+    End Sub
 End Class
 

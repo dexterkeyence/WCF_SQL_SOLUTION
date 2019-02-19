@@ -1288,6 +1288,7 @@ h6,
 }
 p {
   margin: 0 0 10px;
+    height: 479px;
 }
 .lead {
   margin-bottom: 20px;
@@ -2667,6 +2668,10 @@ input[type="search"] {
   font-weight: normal;
   vertical-align: middle;
   cursor: pointer;
+    top: -91px;
+    left: 0px;
+    height: 40px;
+    width: 223px;
 }
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
@@ -5059,6 +5064,7 @@ a.thumbnail.active {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+    height: 16px;
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
