@@ -50,6 +50,5 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         SQLCommand = "Delete from TestDB.dbo.TestTable Where Serial = '231' "
         TextBox1.Text = SQLCommand
-
     End Sub
 End Class

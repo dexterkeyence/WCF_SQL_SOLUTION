@@ -1,1 +1,7 @@
-﻿<%@ ServiceHost Language="VB" Debug="true" Service="WCF_KVHOSTLINK.Service1" CodeBehind="KVHostService1.svc.vb" %>
+﻿<%@ ServiceHost Language="VB" 
+    Debug="true" 
+    Service="WCF_KVHOSTLINK.Service1" 
+    CodeBehind="KVHostService1.svc.vb"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"
+
+    %>

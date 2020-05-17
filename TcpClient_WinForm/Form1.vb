@@ -3,7 +3,7 @@ Imports System.ComponentModel
 Imports System.Net.Sockets
 Imports System.Text
 Public Class Form1
-    Public clientSocket As New System.Net.Sockets.TcpClient
+    'Public clientSocket As New System.Net.Sockets.TcpClient
     Public serverStream As NetworkStream
 
 
@@ -20,7 +20,7 @@ Public Class Form1
         Dim inStream(500024) As Byte
         Dim returndata As String = ""
 
-        clientSocket.ReceiveTimeout = 10000 ' 10 SECONDS
+        clientSocket.ReceiveTimeout = 1000 ' 10 SECONDS
 
         clientSocket.ReceiveBufferSize() = 5000000
 
@@ -57,13 +57,13 @@ Public Class Form1
     End Sub
 
     Private Sub BtnConnect_Click(sender As Object, e As EventArgs) Handles BtnConnect.Click
-
+        Dim clientSocket As New System.Net.Sockets.TcpClient
         Try
             clientSocket.Connect(TextBox2.Text, TextBox3.Text)
             msg("Client Started")
             Label3.Text = "Server Connected ..."
         Catch ex As Exception
-            MsgBox(ex.ToString)
+            'MsgBox(ex.ToString)
             If clientSocket.Connected = False Then
                 MsgBox("Cannot Connect, Please check that IP Address and Port Number is correct!!")
             Else
@@ -89,6 +89,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim clientSocket As New System.Net.Sockets.TcpClient
         clientSocket.Close()
         msg("Client Disconnected")
         Label3.Text = "Server Dis-Connected ..."
@@ -120,7 +121,7 @@ Public Class Form1
         Dim returndata As String = ""
         serverStream.Write(outStream, 0, outStream.Length)
         serverStream.Flush()
-        clientSocket.ReceiveTimeout = 10000 ' 10 SECONDS
+        clientSocket.ReceiveTimeout = 1000 ' 10 SECONDS
 
         clientSocket.ReceiveBufferSize() = 5000000
 

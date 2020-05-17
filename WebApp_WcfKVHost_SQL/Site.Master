@@ -53,6 +53,7 @@
                         <li><a runat="server" href="~/Production_Status">Production_Status</a></li>
                         <li><a runat="server" href="~/Machine1Control">Machine Control</a></li>
                         <li><a runat="server" href="~/DataList">Data List</a></li>
+                        <li><a runat="server" href="~/Charts">Charts</a></li>
                     </ul>
                 </div>
             </div>

@@ -36,6 +36,7 @@ Partial Class Form1
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnRead
@@ -73,7 +74,7 @@ Partial Class Form1
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(622, 168)
+        Me.TextBox1.Size = New System.Drawing.Size(717, 168)
         Me.TextBox1.TabIndex = 5
         '
         'BtnConnect
@@ -87,7 +88,7 @@ Partial Class Form1
         '
         'BtnSend
         '
-        Me.BtnSend.Location = New System.Drawing.Point(412, 392)
+        Me.BtnSend.Location = New System.Drawing.Point(410, 392)
         Me.BtnSend.Name = "BtnSend"
         Me.BtnSend.Size = New System.Drawing.Size(93, 36)
         Me.BtnSend.TabIndex = 7
@@ -133,9 +134,9 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(58, 154)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(99, 13)
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
         Me.Label5.TabIndex = 13
-        Me.Label5.Text = " COMMAND SEND"
+        Me.Label5.Text = "dm0"
         '
         'TextBox4
         '
@@ -163,11 +164,21 @@ Partial Class Form1
         Me.Button2.Text = "Send & Read"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(162, 135)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(27, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "dm0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(825, 463)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -202,4 +213,5 @@ Partial Class Form1
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
 End Class

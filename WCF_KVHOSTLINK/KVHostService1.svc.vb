@@ -7,6 +7,11 @@ Public Class Service1
     Public Sub New()
     End Sub
 
+
+
+
+
+    <WebInvoke(Method:="POST", RequestFormat:=WebMessageFormat.Json, ResponseFormat:=WebMessageFormat.Json)>
     Public Function GetData(ByVal IP As String, ByVal Port As String, ByVal Command As String) As String Implements IKVHOSTService1.GetData
         Dim clientSocket As New System.Net.Sockets.TcpClient
         Dim returndata As String = ""
@@ -18,10 +23,10 @@ Public Class Service1
         Catch ex As Exception
 
             If clientSocket.Connected = False Then
-                returndata = "Cannot Connect, Please check that IP Address and Port Number is correct!!"
+                returndata = returndata + "Cannot Connect, IP Address or Port Number Error!" + vbCrLf
             Else
 
-                returndata = ""
+                returndata = returndata + ""
             End If
         End Try
 
@@ -36,7 +41,7 @@ Public Class Service1
                 serverStream.Flush()
             Catch ex As Exception
 
-                returndata = "Send Command Error"
+                returndata = returndata + "Send Command Error" + vbCrLf
 
             End Try
 
@@ -53,7 +58,7 @@ Public Class Service1
                     returndata = returndata + System.Text.Encoding.ASCII.GetString(inStream)
 
                 Catch ex As Exception
-                    returndata = "No DATA" & vbCrLf
+                    returndata = returndata + "No Data" & vbCrLf
 
                 Finally
 
@@ -68,6 +73,7 @@ Public Class Service1
 
         Return returndata.TrimEnd(Chr(10), Chr(13), Chr(0))
     End Function
+
 
     Public Function GetDataUsingDataContract(ByVal composite As CompositeType) As CompositeType Implements IKVHOSTService1.GetDataUsingDataContract
         If composite Is Nothing Then
